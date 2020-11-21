@@ -2,6 +2,13 @@
 <h4>by: Gabriel Guimarães</h4>
 <h5>Java, Spring Boot, MongoDB, Lombok</h5>
 <br>
+<p>Como executar:</p>
+<p>1. Baixar o projeto</p>
+<p>2. Iniciar o mongoDB na porta 27017</p>
+<p>3. Executar o comando no terminal mvn spring-boot:run na raiz do projeto</p>
+<p>Database e collections serão criadas automaticamente pela API</p>
+<p>Colletion com endpoints e exemplos disponível em /colletions</p>
+
 <p>Endpoints:
 <br>
 <b>/BOT</b>
@@ -22,7 +29,6 @@
     <li>[GET]  /message/conversation/:id - busca mensagens de uma determinada conversa</li>
     </ul> 
 
-<h1>MongoDB</h1>
 <img src="img/mongoDBdraw.png" alt="mongodb">
 
 <h1>List All Bots</h1>
