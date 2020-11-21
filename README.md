@@ -22,16 +22,20 @@
     <li>[GET]  /message/conversation/:id - busca mensagens de uma determinada conversa</li>
     </ul> 
 
+<h1>MongoDB</h1>
+<img src="img/mongoDBdraw.png" alt="mongodb">
 
-<h1>All Bots</h1>
+<h1>List All Bots</h1>
 <img src="img/AllBots.png" alt="All bots">
 <br>
-
 <h1>Create Bot</h1>
-<img src="img/AllBots.png" alt="Create bot">
-
+<img src="img/CreateBot.png" alt="Create bot">
+<br>
 <h1>Delete Bot</h1>
 <img src="img/DeleteBot.png" alt="Create bot">
+<br>
+<h1>Update Bot</h1>
+<img src="img/UpdateBot.png" alt="Update bot">
 
 
 
