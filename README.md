@@ -22,4 +22,6 @@
     <li>[GET]  /message/conversation/:id - busca mensagens de uma determinada conversa</li>
     </ul> 
 
+<img src="AllBots.png" alt="All bots">
 
+![alt text]("AllBots.png")

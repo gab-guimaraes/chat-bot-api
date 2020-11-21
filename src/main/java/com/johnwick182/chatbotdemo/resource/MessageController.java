@@ -4,7 +4,6 @@ package com.johnwick182.chatbotdemo.resource;
 import com.johnwick182.chatbotdemo.model.Message;
 import com.johnwick182.chatbotdemo.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +31,6 @@ public class MessageController {
 
     @GetMapping(path="/conversation/{id}")
     public List<Message> findByConversation(@PathVariable(value="id") String id) {
-        System.out.println(id);
         return messageService.findMessagesByConversation(id);
     }
 }

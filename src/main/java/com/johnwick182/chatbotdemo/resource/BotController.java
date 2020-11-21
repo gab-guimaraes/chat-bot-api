@@ -3,7 +3,6 @@ package com.johnwick182.chatbotdemo.resource;
 import com.johnwick182.chatbotdemo.model.Bot;
 import com.johnwick182.chatbotdemo.service.BotService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,14 +30,6 @@ public class BotController {
     public Optional<Bot>  getById(@PathVariable(value="id") String id) {
         return botService.findById(id);
     }
-
-    /*
-    [GET]    /bot/all - retorna todos os bots criados - DONE
-    [GET]    /bot/:id - busca bot por id - DONE
-    [POST]   /bot/    - cria um novo bot - DONE
-    [DELETE] /bot/:id - deleta o bot por id - DONE
-    [PUT]    /bot/:id - altera o bot
-     */
 
     @RequestMapping(value="/{id}", method=RequestMethod.DELETE)
     public String deleteBot(@PathVariable String id){
