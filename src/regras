@@ -1,0 +1,65 @@
+https://github.com/acenelio/workshop-springboot2-mongodb/blob/master/src/main/java/com/nelioalves/workshopmongo/resources/UserResource.java
+
+
+BOTS, READ, UPDATE, INSERT AND DELETE
+
+POST /bots
+{
+"id": "36b9f842-ee97-11e8-9443-0242ac120002",
+"name": "Aureo"
+}
+- GET /bots/:id
+{
+"id": "36b9f842-ee97-11e8-9443-0242ac120002",
+"name": "Aureo"
+}
+
+------------------------------------------------
+
+MESSAGE:
+
+(i) registering new messages, for a given conversation;
+(ii) return a message by its id;
+(iii) return all messages of a given conversation.
+Messages won't be updated nor deleted.
+
+- POST /messages
+{
+"conversationId": "7665ada8-3448-4acd-a1b7-d688e68fe9a1",
+"timestamp": "2018-11-16T23:30:52.6917722Z",
+"from": "36b9f842-ee97-11e8-9443-0242ac120002",
+"to": "16edd3b3-3f75-40df-af07-2a3813a79ce9",
+"text": "Oi! Como posso te ajudar?"
+}
+- GET /messages/:id
+{
+"id": "16edd3b3-3f75-40df-af07-2a3813a79ce9",
+"conversationId": "7665ada8-3448-4acd-a1b7-d688e68fe9a1",
+"timestamp": "2018-11-16T23:30:52.6917722Z",
+"from": "36b9f842-ee97-11e8-9443-0242ac120002",
+"to": "16edd3b3-3f75-40df-af07-2a3813a79ce9",
+"text": "Oi! Como posso te ajudar?"
+}
+- GET /messages?conversationId=:conversationId
+[
+{
+"id": "16edd3b3-3f75-40df-af07-2a3813a79ce9",
+"conversationId": "7665ada8-3448-4acd-a1b7-d688e68fe9a1",
+"timestamp": "2018-11-16T23:30:52.6917722Z",
+"from": "36b9f842-ee97-11e8-9443-0242ac120002",
+"to": "16edd3b3-3f75-40df-af07-2a3813a79ce9",
+"text": "Oi! Como posso te ajudar?"
+},
+{
+"id": "67ade836-ea2e-4992-a7c2-f04b696dc9ff",
+"conversationId": "7665ada8-3448-4acd-a1b7-d688e68fe9a1",
+"timestamp": "2018-11-16T23:30:57.5926721Z",
+"from": "16edd3b3-3f75-40df-af07-2a3813a79ce9",
+"to": "36b9f842-ee97-11e8-9443-0242ac120002",
+"text": "Gostaria de saber meu saldo?"
+}
+]
+
+
+
+
