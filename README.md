@@ -4,11 +4,22 @@
 <br>
 <p>Endpoints:
 <br>
-<b>BOT</b>
-  
-    [GET]    /bot/all - retorna todos os bots criados - DONE
-    [GET]    /bot/:id - busca bot por id - DONE
-    [POST]   /bot/    - cria um novo bot - DONE
-    [DELETE] /bot/:id - deleta o bot por id - DONE
-    [PUT]    /bot/:id - altera o bot
-     
+<b>/BOT</b>
+  <ul>
+    <li>[GET]    /bot/all - retorna todos os bots criados </li>
+    <li>[GET]    /bot/:id - busca bot por id </li>
+    <li>[POST]   /bot/    - cria um novo bot</li>
+    <li>[DELETE] /bot/:id - deleta o bot por id</li>
+    <li>[PUT]    /bot/:id - altera o bot </li>
+    </ul> 
+   <br>
+   
+<b>/MESSAGE</b>
+
+ <ul>
+    <li>[POST] /message - criar nova mensagem</li>
+    <li>[GET]  /message/:id - busca mensagem por id</li>
+    <li>[GET]  /message/conversation/:id - busca mensagens de uma determinada conversa</li>
+    </ul> 
+
+
