@@ -18,9 +18,8 @@ public class MessageController {
     private MessageService messageService;
 
     @PostMapping(path="/")
-    public @ResponseBody String addMessage(@RequestBody Message message) {
-        messageService.save(message);
-        return "Saved";
+    public ResponseEntity<Message> addMessage(@RequestBody Message message) {
+        return ResponseEntity.ok(messageService.save(message));
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
@@ -30,7 +29,7 @@ public class MessageController {
     }
 
     @GetMapping(path="/conversation/{id}")
-    public List<Message> findByConversation(@PathVariable(value="id") String id) {
-        return messageService.findMessagesByConversation(id);
+    public ResponseEntity<List<Message>> findByConversation(@PathVariable(value="id") String id) {
+        return ResponseEntity.ok(messageService.findMessagesByConversation(id));
     }
 }

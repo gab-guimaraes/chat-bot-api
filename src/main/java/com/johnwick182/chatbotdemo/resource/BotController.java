@@ -2,9 +2,13 @@ package com.johnwick182.chatbotdemo.resource;
 
 import com.johnwick182.chatbotdemo.model.Bot;
 import com.johnwick182.chatbotdemo.service.BotService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,41 +20,42 @@ public class BotController {
     private BotService botService;
 
     @PostMapping(path="/")
-    public @ResponseBody String addBot(@RequestBody Bot bot) {
-        botService.save(bot);
-        return "Saved";
+    public ResponseEntity<Bot> addBot(@RequestBody Bot bot) {
+        return ResponseEntity.ok(botService.save(bot));
     }
 
     @GetMapping("/all")
     public List<Bot> getBots() {
-        return (List<Bot>) botService.findAll();
+        return botService.findAll();
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
-    public Optional<Bot>  getById(@PathVariable(value="id") String id) {
-        return botService.findById(id);
+    public ResponseEntity<Optional<Bot>> getById(@PathVariable(value="id") String id) {
+        Optional<Bot> bot = botService.findById(id);
+        if (bot.isPresent()) {
+            return ResponseEntity.ok(bot);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.DELETE)
-    public String deleteBot(@PathVariable String id){
+    public ResponseEntity<Bot> deleteBot(@PathVariable String id){
         if (botService.findById(id).isPresent()){
             botService.deleteById(id);
-            return "Deleted";
+            return ResponseEntity.noContent().build();
         } else {
-            return "Not Found";
+            return ResponseEntity.notFound().build();
         }
     }
 
     @PutMapping(path="/")
-    public @ResponseBody String updateBot(@RequestBody Bot bot) {
+    public ResponseEntity<Bot> updateBot(@RequestBody Bot bot) {
         if (botService.findById(bot.getId()).isPresent()) {
-            botService.save(bot);
-            return "Bot updated";
+            return ResponseEntity.ok(botService.save(bot));
         } else {
-            return "Not found";
+            return ResponseEntity.notFound().build();
         }
     }
-
-
 
 }

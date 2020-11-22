@@ -14,8 +14,8 @@ public class MessageService {
     @Autowired
     MessageRepository messageRepository;
 
-    public void save(Message message) {
-        messageRepository.save(message);
+    public Message save(Message message) {
+        return messageRepository.save(message);
     }
 
     public Optional<Message> findById(String id) {

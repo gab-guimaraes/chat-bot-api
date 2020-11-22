@@ -14,8 +14,8 @@ public class BotService {
     @Autowired
     private BotRepository botRepository;
 
-    public void save(Bot bot) {
-        botRepository.save(bot);
+    public Bot save(Bot bot) {
+        return botRepository.save(bot);
     }
 
     public List<Bot> findAll() {
