@@ -11,15 +11,6 @@
 
 <br>
 
-<p> Débitos e melhorias:</p>
-<ul>
-<li>Criar testes unitários</li>
-<li></li>
-<li>Criar testes unitários</li>
-
-</ul>
-
-
 <p>Endpoints:
 <br>
 <b>/BOT</b>
@@ -41,6 +32,8 @@
     </ul> 
 
 <img src="img/mongoDBdraw.png" alt="mongodb">
+
+<h1>Testes Postman</h1>
 
 <h1>List All Bots</h1>
 <img src="img/AllBots.png" alt="All bots">
@@ -66,3 +59,19 @@
 <img src="img/getMessageById.png" alt="Get Message By id">
 
 
+<h1>Testes de Performance</h1>
+<h4>Realizados em: Macbook Air - 8gb RAM - i5</h4>
+<h3>Teste l</h3>
+<img src="img/firstTest/firstscreen.png" alt="All bots">
+<img src="img/firstTest/hitsPerSecond.png" alt="All bots">
+<img src="img/firstTest/responseTime.png" alt="All bots">
+<hr>
+<h3>Teste ll</h3>
+<img src="img/secondTest/firstscreen.png" alt="All bots">
+<img src="img/secondTest/hitsPerSecond.png" alt="All bots">
+<img src="img/secondTest/responseTime.png" alt="All bots">
+
+<p> Débitos e melhorias:</p>
+<ul>
+<li>Criar testes unitários</li>
+</ul>
