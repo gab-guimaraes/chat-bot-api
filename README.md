@@ -2,7 +2,7 @@
 <h4>by: Gabriel Guimarães</h4>
 <h3>Java, Spring Boot, MongoDB, Lombok</h3>
 
-<p>Projeto originalmente criado no GitHub<a href="https://github.com/johnwick182/chat-bot-api">https://github.com/johnwick182/chat-bot-api</a> e exportado para o GitLab</p>
+<p>Projeto originalmente criado no GitHub <a href="https://github.com/johnwick182/chat-bot-api">https://github.com/johnwick182/chat-bot-api</a> e exportado para o GitLab</p>
 <br>
 <h4>Como executar:</h4>
 <p>1. Baixar o projeto</p>
