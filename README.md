@@ -1,12 +1,14 @@
 <h1>Chat Bot API</h1>
 <h4>by: Gabriel Guimarães</h4>
-<h5>Java, Spring Boot, MongoDB, Lombok</h5>
+<h3>Java, Spring Boot, MongoDB, Lombok</h3>
+
+<p>Projeto originalmente criado no GitHub<a href="https://github.com/johnwick182/chat-bot-api">https://github.com/johnwick182/chat-bot-api</a> e exportado para o GitLab</p>
 <br>
 <h4>Como executar:</h4>
 <p>1. Baixar o projeto</p>
 <p>2. Iniciar o mongoDB na porta 27017</p>
 <p>3. Executar o comando no terminal <b>mvn spring-boot:run</b> na raiz do projeto</p>
-
+<br>
 <h4>Observação</h4>
 <p>Database e collections serão criadas automaticamente pela API</p>
 <p>Colletion com endpoints e exemplos disponível em /colletions</p>
@@ -16,7 +18,7 @@
 <p>Os id da conversa, from e to devem ser passados pelo client.</p>
 
 <br>
-
+<br>
 <p>Endpoints:
 <br>
 <b>/BOT</b>
