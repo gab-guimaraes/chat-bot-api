@@ -82,6 +82,6 @@
 <p> Débitos e melhorias:</p>
 <ul>
 <li>Criar testes unitários</li>
+<li>Implementar camada de análise de mensagens e respostas do Bot (avaliar solução: DialogFlow)</li>
 <li>Implementar JWT Token</li>
-<li>Implementar user que vai se comunicar com o Bot</li>
 </ul>
